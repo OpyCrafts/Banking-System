@@ -1,0 +1,1019 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #051139;
+  --primary-color: #ffffff;
+  --green1: #2dceb8;
+  --green2: #2dce9a;
+
+  --yellow1: #fb9a40;
+  --yellow2: #fb7640;
+
+  --pink: #f5484b;
+  --redish: #f5554b;
+
+  --blue1: #11b4ef;
+  --blue2: #1183ef;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 3rem 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.head h1,
+i {
+  font-weight: 300;
+}
+
+.head2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.head2 input {
+  padding: 1rem;
+  border-radius: 0.7rem;
+  width: 20rem;
+  background-color: var(--bg-color);
+  border: 0.5px solid var(--primary-color);
+}
+
+.head2 input:focus {
+  outline: #1183ef;
+  border: 3px solid var(--blue2);
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.head2 input:focus::placeholder {
+  color: #1183ef;
+  font-size: 1rem;
+  transform: translateY(-10px);
+  z-index: 1000;
+}
+
+.head2 input::placeholder {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.head2 i {
+  font-size: 1.4rem;
+}
+
+.head2 i:hover {
+  color: var(--blue2);
+}
+
+.head2 a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.head2 a:hover {
+  color: var(--blue2);
+}
+
+/* dashbord */
+.dashboard {
+  background-color: #111a38;
+  width: 100%;
+  height: 70vh;
+  border-radius: 0.7rem;
+  box-shadow: 0px 1px 4px var(--bg-color);
+}
+
+.daash-head {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.daash-head button {
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: 0;
+  box-shadow: 0px 1px 4px #ffffff15;
+  transition: all 0.3s ease;
+}
+.daash-head button:hover {
+  background: var(--blue2);
+  transform: translateY(-3px);
+  box-shadow: 0px 1px 4px var(--bg-color);
+}
+
+.daash-head button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.daash-head button h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* BOARD */
+.board {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.balance {
+  background: var(--bg-color);
+  padding: 1rem;
+  width: 20rem;
+  height: 10rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 1px 4px #ffffff14;
+  margin-bottom: 1rem;
+}
+
+.balance h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.balance span {
+  font-size: 2rem;
+}
+
+.statement {
+  width: 60rem;
+  background: var(--bg-color);
+  height: 21rem;
+  box-shadow: 0px 1px 4px #ffffff19;
+  overflow: hidden;
+}
+
+.statement-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem;
+  font-weight: 400;
+}
+
+.state-head2 {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.state-head2 input {
+  padding: 0.2rem 1rem;
+  border-radius: 0.6rem;
+}
+
+.state-head2 button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.statement-body {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  height: 17rem;
+  padding: 0.6rem 0;
+}
+
+.transfer1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 0.5rem 1rem;
+}
+.transfer1 div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.transfer1 img {
+  background: linear-gradient(to right bottom, var(--green1), var(--green2));
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.transfer1 h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.transfer1 span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ADD MONEY  */
+.transfer2 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 0.5rem 1rem;
+}
+.transfer2 div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.transfer2 img {
+  background: linear-gradient(to right bottom, var(--blue1), var(--blue2));
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.transfer2 h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.transfer2 span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* MOVE MONEY */
+
+.transfer3 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 0.5rem 1rem;
+}
+.transfer3 div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.transfer3 img {
+  background: linear-gradient(to right bottom, var(--yellow2), var(--yellow1));
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.transfer3 h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.transfer3 span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.tf1,
+.tf2,
+.tf3 {
+  display: none;
+}
+
+/* PAYMENT PAGE  */
+
+.cancle {
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.cancle i {
+  color: #ffffff;
+  font-size: 2rem;
+  animation: cancel 0.4s 2s ease;
+}
+
+.cancle:hover i {
+  color: #f5554b;
+}
+
+@keyframes cancel {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.payment--page {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right bottom, var(--blue1), var(--blue2));
+  padding: 2rem;
+  width: 30rem;
+  height: 23rem;
+  color: var(--primary-color);
+  border-radius: 1.2rem;
+  box-shadow: 0px 1px 4px #ffffffb2;
+}
+
+.payment--page h1 {
+  text-align: center;
+}
+
+.payment--page div {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.payment--page div label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment--page div input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 0;
+  box-shadow: 0px 1px 4px #ffffff;
+}
+
+.payment--page div input:focus {
+  outline: none;
+  border: 0px solid #1183ef;
+}
+
+.payment--page button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  border: 0;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: 0px 1px 4px var(--primary-color);
+}
+
+/* ADD MONEY  */
+.payment--page2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right bottom, var(--green1), var(--green2));
+  padding: 2rem;
+  width: 30rem;
+  height: 23rem;
+  color: var(--primary-color);
+  border-radius: 1.2rem;
+  box-shadow: 0px 1px 4px #ffffffb2;
+}
+
+.payment--page2 h1 {
+  text-align: center;
+}
+
+.payment--page2 div {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.payment--page2 div label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment--page2 div select,
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 0;
+  box-shadow: 0px 1px 4px #ffffff;
+}
+
+.payment--page2 div select:focus {
+  outline: 0;
+  border: 0;
+}
+
+.payment--page2 div input:focus {
+  outline: none;
+  border: 0px solid #1183ef;
+}
+
+.payment--page2 button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  border: 0;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: 0px 1px 4px var(--primary-color);
+}
+
+/* MOVE FUNDS  */
+.payment--page3 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right bottom, var(--pink), var(--redish));
+  padding: 2rem;
+  width: 30rem;
+  height: 23rem;
+  color: var(--primary-color);
+  border-radius: 1.2rem;
+  box-shadow: 0px 1px 4px #ffffffb2;
+}
+
+.payment--page3 h1 {
+  text-align: center;
+}
+
+.payment--page3 div {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.payment--page3 div label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment--page3 div select,
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 0;
+  box-shadow: 0px 1px 4px #ffffff;
+}
+
+.payment--page3 div select:focus {
+  outline: 0;
+  border: 0;
+}
+
+.payment--page3 div input:focus {
+  outline: none;
+  border: 0px solid #1183ef;
+}
+
+.payment--page3 button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  border: 0;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: 0px 1px 4px var(--primary-color);
+}
+
+.alert {
+  background: #ffffff;
+  color: #f5484b;
+  width: 20rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+
+.alert1 {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  .head h1,
+  i {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .head2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  .head2 input {
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    width: 7rem;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--primary-color);
+  }
+
+  .head2 input:focus {
+    outline: #1183ef;
+    border: 3px solid var(--blue2);
+    color: var(--primary-color);
+    font-size: 0.5rem;
+  }
+
+  .head2 input:focus::placeholder {
+    color: #1183ef;
+    font-size: 0.5rem;
+  }
+
+  .head2 input::placeholder {
+    font-size: 0.7rem;
+    color: var(--primary-color);
+  }
+
+  .head2 i {
+    font-size: 1rem;
+  }
+
+  /* dashbord */
+  .dashboard {
+    background-color: #111a38;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0px 1px 4px var(--bg-color);
+  }
+
+  .daash-head {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .daash-head button {
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border: 0;
+    box-shadow: 0px 1px 4px #ffffff15;
+    transition: all 0.3s ease;
+  }
+
+  .daash-head button:not(:last-child) {
+    margin-right: 0rem;
+  }
+
+  .daash-head button h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  /* BOARD */
+  .board {
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .balance {
+    background: var(--bg-color);
+    padding: 1rem;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 1px 4px #ffffff14;
+    margin-bottom: 1rem;
+  }
+
+  .statement {
+    width: 100%;
+    background: var(--bg-color);
+    height: 100%;
+    box-shadow: 0px 1px 4px #ffffff19;
+    overflow: hidden;
+  }
+
+  .statement-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem;
+    font-weight: 400;
+  }
+
+  .statement-head h3 {
+    font-size: 0.8rem;
+  }
+
+  .state-head2 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .state-head2 input {
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.6rem;
+    font-size: 0.5rem;
+  }
+
+  .state-head2 button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 300;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .state-head2 button i {
+    font-size: 0.6rem;
+  }
+
+  .statement-body {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    height: 17rem;
+    padding: 0.6rem 0;
+  }
+
+  .transfer1 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding: 0.5rem 1rem;
+  }
+  .transfer1 div {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .transfer1 img {
+    background: linear-gradient(to right bottom, var(--green1), var(--green2));
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .transfer1 h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .transfer1 span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  /* ADD MONEY  */
+  .transfer2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding: 0.5rem 1rem;
+  }
+  .transfer2 div {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .transfer2 img {
+    background: linear-gradient(to right bottom, var(--blue1), var(--blue2));
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .transfer2 h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+
+  .transfer2 span {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  /* MOVE MONEY */
+
+  .transfer3 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding: 0.5rem 1rem;
+  }
+  .transfer3 div {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .transfer3 img {
+    background: linear-gradient(
+      to right bottom,
+      var(--yellow2),
+      var(--yellow1)
+    );
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .transfer3 h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .transfer3 span {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .tf1,
+  .tf2,
+  .tf3 {
+    display: none;
+  }
+
+  /* PAYMENT PAGE  */
+
+  .cancle {
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    background-color: transparent;
+    transition: all 0.4s ease;
+  }
+
+  .cancle i {
+    color: #ffffff;
+    font-size: 1rem;
+    animation: cancel 0.4s 2s ease;
+  }
+
+  .payment--page {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right bottom, var(--blue1), var(--blue2));
+    padding: 1rem;
+    width: 22rem;
+    height: 23rem;
+    color: var(--primary-color);
+    border-radius: 1.2rem;
+    box-shadow: 0px 1px 4px #ffffffb2;
+  }
+
+  .payment--page h1 {
+    text-align: center;
+  }
+
+  .payment--page div {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .payment--page div label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .payment--page div input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: 0;
+    box-shadow: 0px 1px 4px #ffffff;
+  }
+
+  .payment--page div input:focus {
+    outline: none;
+    border: 0px solid #1183ef;
+  }
+
+  .payment--page button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    border: 0;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: 0px 1px 4px var(--primary-color);
+  }
+
+  /* ADD MONEY  */
+  .payment--page2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right bottom, var(--green1), var(--green2));
+    padding: 2rem;
+    width: 22rem;
+    height: 23rem;
+    color: var(--primary-color);
+    border-radius: 1.2rem;
+    box-shadow: 0px 1px 4px #ffffffb2;
+  }
+
+  .payment--page2 h1 {
+    text-align: center;
+  }
+
+  .payment--page2 div {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .payment--page2 div label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .payment--page2 div select,
+  input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: 0;
+    box-shadow: 0px 1px 4px #ffffff;
+  }
+
+  .payment--page2 div select:focus {
+    outline: 0;
+    border: 0;
+  }
+
+  .payment--page2 div input:focus {
+    outline: none;
+    border: 0px solid #1183ef;
+  }
+
+  .payment--page2 button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    border: 0;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: 0px 1px 4px var(--primary-color);
+  }
+
+  /* MOVE FUNDS  */
+  .payment--page3 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right bottom, var(--pink), var(--redish));
+    padding: 2rem;
+    width: 22rem;
+    height: 23rem;
+    color: var(--primary-color);
+    border-radius: 1.2rem;
+    box-shadow: 0px 1px 4px #ffffffb2;
+  }
+
+  .payment--page3 h1 {
+    text-align: center;
+  }
+
+  .payment--page3 div {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .payment--page3 div label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .payment--page3 div select,
+  input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: 0;
+    box-shadow: 0px 1px 4px #ffffff;
+  }
+
+  .payment--page3 div select:focus {
+    outline: 0;
+    border: 0;
+  }
+
+  .payment--page3 div input:focus {
+    outline: none;
+    border: 0px solid #1183ef;
+  }
+
+  .payment--page3 button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    border: 0;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: 0px 1px 4px var(--primary-color);
+  }
+
+  .alert {
+    background: #ffffff;
+    color: #f5484b;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.7rem;
+  }
+
+  .alert1 {
+    display: none;
+  }
+}

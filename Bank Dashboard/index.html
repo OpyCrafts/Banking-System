@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="head">
+        <h1><i class="bi bi-house-door-fill"></i> / Dashboard</h1>
+      </div>
+
+      <div class="head2">
+        <input type="text" placeholder=" Type here..." />
+        <a href="#"><i class="bi bi-person-circle"></i> Sign in</a>
+        <i class="bi bi-gear-fill"></i>
+        <i class="bi bi-bell-fill"></i>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <div class="daash-head">
+        <div class="daash-head1">
+          <button class="fund">
+            <h3><i class="bi bi-plus-lg"></i> Fund Account</h3>
+          </button>
+        </div>
+
+        <div class="dash-head2">
+          <button class="transfer">
+            <h3><i class="bi bi-send"></i> Transfer</h3>
+          </button>
+
+          <button class="History">
+            <h3><i class="bi bi-clock-history"></i> Withdraw</h3>
+          </button>
+        </div>
+      </div>
+
+      <div class="board">
+        <div>
+          <div class="balance balance1">
+            <h4>checking Balance in USD</h4>
+            <span>$0</span>
+          </div>
+
+          <div class="balance balance2">
+            <h4>Savings Balance in USD</h4>
+            <span>$0</span>
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="statement-head">
+            <h3>Transaction History</h3>
+
+            <div class="state-head2">
+              <input type="text" placeholder="Search transaction" />
+              <button>last 30days <i class="bi bi-chevron-down"></i></button>
+              <button>filter <i class="bi bi-funnel-fill"></i></button>
+            </div>
+          </div>
+
+          <div class="statement-body">
+            <div class="transfer1 tf1">
+              <div>
+                <img src="/img/arrow-up.svg" />
+                <h4>Transfer to Olaoye Opeyemi</h4>
+              </div>
+              <span>+ $10,000</span>
+            </div>
+
+            <div class="transfer2 tf2">
+              <div>
+                <img src="/img/arrow-down.svg" />
+                <h4>Your Money have successfully been added</h4>
+              </div>
+              <span>+ $10,000</span>
+            </div>
+
+            <div class="transfer3 tf3">
+              <div>
+                <img src="/img/arrow-repeat.svg" />
+                <h4>Your Money have successfully been moved</h4>
+              </div>
+              <span>+ $10,000</span>
+            </div>
+            <div class="transfer1 tf1">
+              <div>
+                <img src="/img/arrow-up.svg" />
+                <h4>Transfer to Olaoye Opeyemi</h4>
+              </div>
+              <span>+ $10,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment--page2">
+      <div class="payment">
+        <h1><i class="bi bi-plus-lg"></i> transfer</h1>
+        <form action="#">
+          <div>
+            <label for="text">Choose Account</label>
+            <select name="Account" id="chooseaccount">
+              <option value="checking">Checkings Account</option>
+              <option value="savings">Savings Account</option>
+            </select>
+          </div>
+
+          <div class="amount">
+            <label for="text">Amount :</label>
+            <input
+              type="number"
+              placeholder="Enter Your Anmount"
+              required
+              class="amountInput"
+            />
+          </div>
+          <button type="button" class="submit">Submit</button>
+        </form>
+      </div>
+
+      <button class="cancle">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </section>
+
+    <section class="payment--page">
+      <div class="payment">
+        <h1><i class="bi bi-send"></i> transfer</h1>
+        <form action="#">
+          <div>
+            <label for="text"> Full Name</label>
+            <input type="text" placeholder="Enter Receiver Name..." required />
+          </div>
+
+          <div>
+            <label for="text">Amount :</label>
+            <input type="number" placeholder="Enter Your Anmount" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <button class="cancle">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </section>
+
+    <section class="payment--page3">
+      <div class="payment">
+        <h1><img src="/img/arrow-repeat.svg" /> Withdraw</h1>
+        <form action="#">
+          <div>
+            <label for="text">Choose Account</label>
+            <select name="Account" id="chooseaccount1">
+              <option value="checking">Checkings Account</option>
+              <option value="savings">Savings Account</option>
+            </select>
+          </div>
+
+          <div class="amount">
+            <label for="text">Amount :</label>
+            <input
+              type="number"
+              placeholder="Enter Your Anmount"
+              required
+              class="amountInput"
+            />
+          </div>
+          <button type="button" class="submit1">Submit</button>
+        </form>
+      </div>
+
+      <button class="cancle">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </section>
+
+    <div class="alert alert1">
+      <span>❌not enough balance buddy</span>
+    </div>
+    <!-- 
+    <section class="payment--page">
+      <div class="payment">
+        <h1><i class="bi bi-send"></i> transfer</h1>
+        <form action="#">
+          <div>
+            <label for="text"> Full Name</label>
+            <input type="text" placeholder="Enter Receiver Name..." required />
+          </div>
+
+          <div>
+            <label for="text">Amount :</label>
+            <input
+              type="number"
+              placeholder="Enter Your Anmount"
+              required
+              readonly
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="payment">
+        <h1><i class="bi bi-send"></i> transfer</h1>
+        <form action="#">
+          <div>
+            <label for="text"> Full Name</label>
+            <input type="text" placeholder="Enter Receiver Name..." required />
+          </div>
+
+          <div>
+            <label for="text">Amount :</label>
+            <input
+              type="number"
+              placeholder="Enter Your Anmount"
+              required
+              readonly
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="cancle"><i class="bi bi-x-lg"></i></div>
+    </section> -->
+
+    <!-- <section class="payment--page3">
+      <div class="payment">
+        <h1><i class="bi bi-arrow-repeat"></i> transfer</h1>
+        <form action="#">
+          <div>
+            <label for="text">From</label>
+            <select name="Account" id="">
+              <option value="text">Savings Account</option>
+              <option value="text">Checkings Account</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="text">to</label>
+            <select name="Account" id="">
+              <option value="text">Savings Account</option>
+              <option value="text">Checkings Account</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="text">Amount :</label>
+            <input
+              type="number"
+              placeholder="Enter Your Anmount"
+              required
+              readonly
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section> -->
+    <script src="/index.js"></script>
+  </body>
+</html>
